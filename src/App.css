@@ -27,7 +27,7 @@
 
 }
 .exbody{
-  background: url(https://raw.githubusercontent.com/halisuyanik/my-portfolio-react-tailwindcss-graphql/main/public/Stars.svg);
+  background: url(https://raw.githubusercontent.com/halisuyanik/my-portfolio-react-graphql-tailwindcss/main/public/Stars.svg);
   background-attachment: fixed;
   animation: stars-move-in 1000ms 300ms forwards;
 
@@ -46,7 +46,7 @@
   top: 0;
   right: 0;
   position: fixed;
-  background: url(https://raw.githubusercontent.com/halisuyanik/my-portfolio-react-tailwindcss-graphql/main/public/Moon.svg) right 150% no-repeat;
+  background: url(https://raw.githubusercontent.com/halisuyanik/my-portfolio-react-graphql-tailwindcss/main/public/Moon.svg) right 150% no-repeat;
   background-size: 40% 40%;
   margin-top: 34px;
   width: 100%;
