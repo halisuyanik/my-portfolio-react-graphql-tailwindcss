@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap');
+
+:root
+{
+  --yellow: #8bcfb1;
+    --orange : #42b883;
+    --black : #242D49;
+    --gray : #788097;
+    --blueCard : #DDF8FE;
+    --purple: rgb(238 210 255);
+    --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
+    --orangeCard: #8bcfb1;
+    --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+    
+}
+.App{
+    padding: 0.5rem 1rem;
+    overflow: hidden;
+    color: var(--black); 
+
+
+}
+.exbody{
+  background: url(https://raw.githubusercontent.com/halisuyanik/my-portfolio-react-tailwindcss-graphql/main/public/Stars.svg);
+  background-attachment: fixed;
+  animation: stars-move-in 1000ms 300ms forwards;
+
+}
+@keyframes stars-move-in {
+  from {
+    background-position-y: -100px;
+  }
+  to {
+    opacity: 1;
+    background-position-y: 0;
+  }
+}
+.moon {
+
+  top: 0;
+  right: 0;
+  position: fixed;
+  background: url(https://raw.githubusercontent.com/halisuyanik/my-portfolio-react-tailwindcss-graphql/main/public/Moon.svg) right 150% no-repeat;
+  background-size: 40% 40%;
+  margin-top: 34px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  animation: moon-move-in 1.2s 1s forwards;
+}
+
+@keyframes moon-move-in {
+  from {
+    opacity: 0;
+    background-position: right 150%;
+  }
+  to {
+    opacity: 1;
+    background-position: top right;
+  }
+}
+
+
+
+.button {
+    background: linear-gradient(180deg, #42b883 26.71%, #8bcfb1 99.36%);
+    border-radius: 34px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 11px 26px 11px 26px;
+  }
+  
+  .button:hover {
+    background: white;
+    cursor: pointer;
+    border: 1px solid #42b883;
+    color: #42b883;
+  }
+  @media screen and (max-width: 480px) {
+    .App {
+      padding: 0.5rem 1rem;
+
+    }
+    .moon{
+      z-index:-1;
+      margin-top: 4px;
+    }
+  }
+
+  
+
+  
