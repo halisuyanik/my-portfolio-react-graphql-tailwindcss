@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useContext } from "react";
 import "./Intro.css";
 
@@ -12,7 +11,7 @@ import { Link } from "react-scroll";
 
 const Intro = () => {
   // Transition
-
+  const transition = { duration: 2, type: "spring" };
 
   // context
   const theme = useContext(themeContext);
@@ -70,9 +69,10 @@ const Intro = () => {
                 <div className="flex items-center py-0 my-0 space-x-4 text-gray-500">
                   <span>// Portfolio.jsx </span>
                 </div>
-                <p className="text-yellow-300">
-                  <span className="text-gray-500">//{" "}Todo:
-                  'Develop your lousy design talent.'</span>
+                <p className="text-gray-500">
+                  <span className="text-gray-500">//</span>{" "}
+                  <span className="text-gray-500">Todo: </span>
+                  'Develop your lousy design talent.'
                 </p>
 
                 <div className="flex flex-wrap md:items-center md:space-x-4">
@@ -120,16 +120,25 @@ const Intro = () => {
                           wrapper="span" // Animation will be rendered as a <span>
                           repeat={Infinity} // Repeat this Animation Sequence infinitely
                         />
-                          </span>
+                        </span>
                 </p>
               </div>
-              
+              <div className="w-full md:w-1/2">
+                <div className="flex justify-start md:justify-start">
+                  <a
+                    target="_blank"
+                    href="https://github.com/halisuyanik"
+                    className="text-purple-300 transition duration-300 text-center md:text-left"
+                  >
+                    Github
+                  </a>
+                </div>
+              </div>
             </div>
           </code>
         </pre>
       </div>
     </article>
-
         
        
 
