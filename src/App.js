@@ -14,6 +14,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AnimatedCursor from "react-animated-cursor";
 import { Helmet } from "react-helmet";
+import NotFound from "./pages/NotFound/NotFound.jsx";
 
 function App() {
   const theme = useContext(themeContext);
@@ -60,6 +61,7 @@ function App() {
             <Routes>
               <Route exact path="/" element={<Intro />} />
               <Route path="/Works" element={<Works />} />
+              <Route path='*' element={<NotFound></NotFound>}/>
             </Routes>
             <Footer></Footer>
           </BrowserRouter>

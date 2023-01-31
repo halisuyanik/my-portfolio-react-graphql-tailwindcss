@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useContext } from "react";
 import "./Intro.css";
 
@@ -11,7 +12,7 @@ import { Link } from "react-scroll";
 
 const Intro = () => {
   // Transition
-  const transition = { duration: 2, type: "spring" };
+
 
   // context
   const theme = useContext(themeContext);
