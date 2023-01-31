@@ -12,7 +12,7 @@ const NotFound=()=> {
         <div className="bl_page404__el1"></div>
         <div className="bl_page404__el2"></div>
         <div className="bl_page404__el3"></div>
-        <a className="bl_page404__link" href="/">go home</a>
+        <a className="bl_page404__link" style={{cursor:"none"}} href="/">go home</a>
     </div>
     </main>
     </>

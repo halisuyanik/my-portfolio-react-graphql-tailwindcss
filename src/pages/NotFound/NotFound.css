@@ -41,8 +41,8 @@ body {
     margin: 0 auto;
     width: 260px;
     height: 64px;
-    box-shadow: 0 5px 0 #9c1007, inset 0 0 18px rgba(253, 60, 0, 0.75);
-    background-color: #f95801;
+    box-shadow: 0 5px 0 #42b883, inset 0 0 18px #42b880;
+    background-color: #42b883;
     color: #fff;
     font-family: "Open Sans", sans-serif;
     font-size: 24px;
@@ -55,7 +55,8 @@ body {
   }
   .bl_page404__link:hover,
   .bl_page404__link:focus {
-    background-color: #ff7400;
+    color:white;
+    background-color: #42b880;
   }
   .bl_page404__el1 {
     position: absolute;
