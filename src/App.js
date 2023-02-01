@@ -6,7 +6,7 @@ import "./App.css";
 // import Portfolio from "./components/Portfolio/Portfolio";
 import Footer from "./components/Footer/Footer";
 import Works from "./pages/Works";
-
+import {useState} from "react"
 import { useContext } from "react";
 import { themeContext } from "./Context";
 
@@ -57,7 +57,7 @@ function App() {
         <div className="exbody">
           <BrowserRouter>
             <Navbar />
-
+            
             <Routes>
               <Route exact path="/" element={<Intro />} />
               <Route path="/Works" element={<Works />} />

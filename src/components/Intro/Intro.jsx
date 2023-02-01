@@ -1,15 +1,20 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Intro.css";
 
 import Github from "@iconscout/react-unicons/icons/uil-github";
 import Twitter from "@iconscout/react-unicons/icons/uil-twitter";
 import Linkedin from '@iconscout/react-unicons/icons/uil-linkedin';
+import DarthVader from '@iconscout/react-unicons/icons/uil-line-alt';
 import { TypeAnimation } from "react-type-animation";
 import { themeContext } from "../../Context";
 
 import { Link } from "react-scroll";
 
+
+import Modal from "../Modal/Modal";
+
 const Intro = () => {
+  
   // Transition
   const transition = { duration: 2, type: "spring" };
 
@@ -17,12 +22,21 @@ const Intro = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
 
+
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
     <div className="Intro" id="Intro ">
+    
+
+      {showModal? (
+       <Modal setShowModal={setShowModal}></Modal>
+      ):null }
       {/* left name side */}
       <div className="i-left ml-4">
         <div className="i-name ">
+       
           {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "", fontSize: "2em" }}>
             Hello, I'm 👋
@@ -56,6 +70,10 @@ const Intro = () => {
           <a target="blank" href="https://twitter.com/jalletbtw">
             <Twitter color={darkMode ? "white" : "var(--black)"} size={"3rem"} />
           </a>
+          <a>
+          <DarthVader onClick={()=> setShowModal(true)} color={darkMode ? "white" : "var(--black)"} size={"3rem"} />
+          </a>
+            
         </div>
       </div>
 
@@ -65,7 +83,9 @@ const Intro = () => {
         <article className="prose ml-4 md:mt-1 md:prose-lg flex flex-wrap dark:prose-dark">
           <div>
             <pre>
+              
               <code className="language-js">
+                
                 <div className="flex items-center py-0 my-0 space-x-4 text-gray-500">
                   <span>// Portfolio.jsx </span>
                 </div>
@@ -136,7 +156,9 @@ const Intro = () => {
               </div>
             </div>
           </code>
-        </pre>
+          
+        </pre> 
+        
       </div>
     </article>
         
