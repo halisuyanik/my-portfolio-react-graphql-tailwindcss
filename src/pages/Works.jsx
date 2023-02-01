@@ -97,7 +97,7 @@ const Works = () => {
                                 ? "This project doesn't have a description"
                                 : description}
                             </p>
-                            <a
+                            <a style={{cursor:"none"}}
                               href={source}
                               target="_blank"
                               rel="noopener noreferrer"
