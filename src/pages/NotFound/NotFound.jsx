@@ -1,8 +1,14 @@
 import React from 'react'
 import "./NotFound.css"
+import { Helmet } from "react-helmet";
 const NotFound=()=> {
   return (
     <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Halis Uyanık/404</title>
+        <link rel="canonical" href="http://halisuyanik.dev" />
+      </Helmet>
         <main className="bl_page404 " >
           <div className='flex justify-center'>
           <p>Error 404. The page does not exist</p>

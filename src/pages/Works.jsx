@@ -38,7 +38,7 @@ const Works = () => {
 
   useEffect(() => {
     const getProjects = async () => {
-      const data = await fetch(process.env.GRAPH_API_KEY, {
+      const data = await fetch(`"${process.env.GRAPH_API_KEY}"`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query }),
@@ -66,7 +66,7 @@ const Works = () => {
       {loading ? (
         <div>{loading && <Loading></Loading>}</div>
       ) : (
-        <div className="portfolio flex flex-col mb-12">
+        <div className="portfolio flex flex-col mb-12 ">
           {/* heading */}
 
           <section className="text-gray-600 ">

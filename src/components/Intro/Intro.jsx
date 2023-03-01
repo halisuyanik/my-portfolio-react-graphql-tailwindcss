@@ -4,14 +4,13 @@ import "./Intro.css";
 import Github from "@iconscout/react-unicons/icons/uil-github";
 import Twitter from "@iconscout/react-unicons/icons/uil-twitter";
 import Linkedin from '@iconscout/react-unicons/icons/uil-linkedin';
-import DarthVader from '@iconscout/react-unicons/icons/uil-line-alt';
+
 import { TypeAnimation } from "react-type-animation";
 import { themeContext } from "../../Context";
 
 import { Link } from "react-scroll";
 
-
-import Modal from "../Modal/Modal";
+import { Helmet } from "react-helmet";
 
 const Intro = () => {
   
@@ -27,12 +26,14 @@ const Intro = () => {
 
   return (
     <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Halis Uyanik</title>
+        <link rel="canonical" href="http://halisuyanik.dev" />
+      </Helmet>
     <div className="Intro" id="Intro ">
     
 
-      {showModal? (
-       <Modal setShowModal={setShowModal}></Modal>
-      ):null }
       {/* left name side */}
       <div className="i-left ml-4">
         <div className="i-name ">
@@ -42,6 +43,7 @@ const Intro = () => {
             Hello, I'm 👋
           </span>
           <span>Halis</span>
+          <p></p>
           <span style={{ color: darkMode ? "white" : "", fontSize: "1.4em" }}>
             a Software Developer working in Ankara, Turkey.
             
@@ -70,9 +72,7 @@ const Intro = () => {
           <a target="blank" href="https://twitter.com/jalletbtw">
             <Twitter color={darkMode ? "white" : "var(--black)"} size={"3rem"} />
           </a>
-          <a>
-          <DarthVader onClick={()=> setShowModal(true)} color={darkMode ? "white" : "var(--black)"} size={"3rem"} />
-          </a>
+
             
         </div>
       </div>

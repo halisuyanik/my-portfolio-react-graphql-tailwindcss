@@ -17,8 +17,7 @@ import { Helmet } from "react-helmet";
 import NotFound from "./pages/NotFound/NotFound.jsx";
 
 function App() {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
+  const { state, dispatch } = useContext(themeContext);
   return (
     <>
       <Helmet>
@@ -27,10 +26,10 @@ function App() {
         <link rel="canonical" href="http://halisuyanik.dev" />
       </Helmet>
       <div
-        className="App"
+        className="App  transition-all  duration-500 ease-out"
         style={{
-          background: darkMode ? "#101726" : "",
-          color: darkMode ? "white" : "",
+          background: state.darkMode ? "#101726" : "",
+          color: state.darkMode ? "white" : "",
         }}
       >
         <AnimatedCursor
