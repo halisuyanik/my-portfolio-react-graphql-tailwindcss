@@ -6,8 +6,7 @@ import Twitter from "@iconscout/react-unicons/icons/uil-twitter";
 import Linkedin from '@iconscout/react-unicons/icons/uil-linkedin';
 
 import { TypeAnimation } from "react-type-animation";
-import { themeContext } from "../../Context";
-
+import { themeContext } from "../../context/ThemeContext";
 import { Link } from "react-scroll";
 
 import { Helmet } from "react-helmet";
@@ -18,8 +17,7 @@ const Intro = () => {
   const transition = { duration: 2, type: "spring" };
 
   // context
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
+  const { state, dispatch } = useContext(themeContext);
 
 
   const [showModal, setShowModal] = useState(false);
@@ -39,16 +37,16 @@ const Intro = () => {
         <div className="i-name ">
        
           {/* yahan change hy darkmode ka */}
-          <span style={{ color: darkMode ? "white" : "", fontSize: "2em" }}>
+          <span style={{ color: state.darkMode ? "white" : "", fontSize: "2em" }}>
             Hello, I'm 👋
           </span>
           <span>Halis</span>
           <p></p>
-          <span style={{ color: darkMode ? "white" : "", fontSize: "1.4em" }}>
+          <span style={{ color: state.darkMode ? "white" : "", fontSize: "1.4em" }}>
             a Software Developer working in Ankara, Turkey.
             
           </span>
-          <span style={{ color: darkMode ? "gray" : "gray", fontSize: "1em" }}>
+          <span style={{ color: state.darkMode ? "gray" : "gray", fontSize: "1em" }}>
            I'm creating something for web and backend architecture.
         <TypeAnimation
               // Same String at the start will only be typed once, initially
@@ -64,13 +62,13 @@ const Intro = () => {
         {/* social icons */}
         <div className="i-icons">
           <a target="blank" href="https://github.com/halisuyanik">
-            <Github color={darkMode ? "white" : "var(--black)"} size={"3rem"} />
+            <Github color={state.darkMode ? "white" : "var(--black)"} size={"3rem"} />
           </a>
           <a target="blank" href="https://www.linkedin.com/in/halis-uyan%C4%B1k-a62896171/">
-            <Linkedin color={darkMode ? "white" : "var(--black)"} size={"3rem"} />
+            <Linkedin color={state.darkMode ? "white" : "var(--black)"} size={"3rem"} />
           </a>
           <a target="blank" href="https://twitter.com/jalletbtw">
-            <Twitter color={darkMode ? "white" : "var(--black)"} size={"3rem"} />
+            <Twitter color={state.darkMode ? "white" : "var(--black)"} size={"3rem"} />
           </a>
 
             

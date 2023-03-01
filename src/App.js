@@ -8,7 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Works from "./pages/Works";
 import {useState} from "react"
 import { useContext } from "react";
-import { themeContext } from "./Context";
+import { themeContext } from "./context/ThemeContext";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

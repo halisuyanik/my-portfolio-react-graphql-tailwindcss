@@ -5,7 +5,7 @@ import {Link, Route} from 'react-router-dom';
 
 function Navbar(){
   const [currentRoute, setCurrentRoute] = useState("home");
-
+  
    const handleCurrentRoute=async(route)=>{
     setCurrentRoute(route);
     console.log(currentRoute);

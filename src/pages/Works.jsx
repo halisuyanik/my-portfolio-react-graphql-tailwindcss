@@ -2,7 +2,8 @@ import React, { useEffect, useState, useContext } from "react";
 
 import "./Works.css";
 import HiChevronRight from "@iconscout/react-unicons/icons/uil-angle-right";
-import { themeContext } from "../Context";
+import {themeContext} from "../context/ThemeContext"
+
 import Loading from "../Loading";
 
 import { Helmet } from "react-helmet";
@@ -14,8 +15,7 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const Works = () => {
   const transition = { duration: 2, type: "spring" };
 
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
+  const { darkMode, dispatch } = useContext(themeContext);
 
   const [projects, setProjects] = useState(null);
 

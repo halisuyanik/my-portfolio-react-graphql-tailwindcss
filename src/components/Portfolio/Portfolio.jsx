@@ -5,10 +5,9 @@ import HiChevronRight from "@iconscout/react-unicons/icons/uil-angle-right";
 import { themeContext } from "../../Context";
 
 import { request } from 'graphql-request';
-
+import {ThemeContext} from "../context/ThemeContext"
 const Portfolio = () => {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
+  const { state, dispatch } = useContext(ThemeContext);
 
   const [projects, setProjects] = useState(null);
 
@@ -59,7 +58,7 @@ const Portfolio = () => {
         <span  class="w-3 h-3 rounded-full bg-yellow-400"></span>
         <span  class="w-3 h-3 rounded-full bg-green-400"></span>
     </div>
-    <div style={{opacity: darkMode?'0.75':'1'}} className=" h-full  bg-gray-700 px-8 pt-8 pb-24 rounded-b-lg overflow-hidden text-center relative">
+    <div style={{opacity: state.darkMode?'0.75':'1'}} className=" h-full  bg-gray-700 px-8 pt-8 pb-24 rounded-b-lg overflow-hidden text-center relative">
          
           <h2 className="tracking-widest text-xs title-font font-medium bg-blue-100 dark:bg-[#d6bcfa29] rounded-full inline-block px-4 py-1 text-purple-300 mb-1">
                  {language}
