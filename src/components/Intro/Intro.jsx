@@ -4,6 +4,7 @@ import "./Intro.css";
 import Github from "@iconscout/react-unicons/icons/uil-github";
 import Twitter from "@iconscout/react-unicons/icons/uil-twitter";
 import Linkedin from '@iconscout/react-unicons/icons/uil-linkedin';
+import Mail from '@iconscout/react-unicons/icons/uil-envelope-alt'
 
 import { TypeAnimation } from "react-type-animation";
 import { themeContext } from "../../context/ThemeContext";
@@ -11,6 +12,7 @@ import { Link } from "react-scroll";
 
 import { Helmet } from "react-helmet";
 
+import astronaut from '../../img/spaceman.png'
 const Intro = () => {
   
   // Transition
@@ -18,7 +20,7 @@ const Intro = () => {
 
   // context
   const { state, dispatch } = useContext(themeContext);
-
+  
 
   const [showModal, setShowModal] = useState(false);
 
@@ -67,10 +69,13 @@ const Intro = () => {
           <a target="blank" href="https://www.linkedin.com/in/halis-uyan%C4%B1k-a62896171/">
             <Linkedin color={state.darkMode ? "white" : "var(--black)"} size={"3rem"} />
           </a>
+          <a target="blank" href="mailto:halisuyanik@outlook.com"  >
+            <Mail color={state.darkMode ? "white" : "var(--black)"} size={"3rem"} />
+          </a>
           <a target="blank" href="https://twitter.com/jalletbtw">
             <Twitter color={state.darkMode ? "white" : "var(--black)"} size={"3rem"} />
           </a>
-
+          
             
         </div>
       </div>
@@ -170,6 +175,10 @@ const Intro = () => {
       </div>
       
     </div>
+
+      {/* <img className="Spaceman" src={astronaut}  alt="spaceman" /> */}
+
+    
     <div className="moon" />
     </>
   );

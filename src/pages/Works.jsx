@@ -64,7 +64,7 @@ const Works = () => {
       </Helmet>
       <LoadingBar color="#42b883" progress={progress} onLoaderFinished={() => setProgress(0)} />
       {loading ? (
-        <div>{loading && <Loading></Loading>}</div>
+        <div className="min-h-screen">{loading && <Loading></Loading>}</div>
       ) : (
         <div className="portfolio flex flex-col mb-12 ">
           {/* heading */}

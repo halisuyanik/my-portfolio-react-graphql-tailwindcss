@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         sky: colors.sky,
         cyan: colors.cyan,
+        maingreen:"#42b883"
       },
       animation: {
         tilt: 'tilt 2s linear infinite',
@@ -34,5 +35,6 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/typography"),
+    require('tailwind-scrollbar')
   ],
 }

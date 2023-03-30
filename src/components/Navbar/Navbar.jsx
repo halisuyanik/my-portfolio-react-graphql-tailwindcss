@@ -1,18 +1,24 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Toggle from "../Toggle/Toggle";
 import "./Navbar.css";
-import {Link, Route} from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-function Navbar(){
-  const [currentRoute, setCurrentRoute] = useState("home");
-  
-   const handleCurrentRoute=async(route)=>{
-    setCurrentRoute(route);
-    console.log(currentRoute);
+export const links = [
+  {
+    name: "Home",
+    path: "/"
+  },
+  {
+    name: "Works",
+    path: "/Works"
   }
+]
+
+function Navbar() {
+  const location = useLocation();
 
   return (
-    <div className="n-wrapper" id="Navbar">
+    <div className="n-wrapper " id="Navbar">
       {/* left */}
       <div className="n-left">
         <div className="n-name"></div>
@@ -22,20 +28,13 @@ function Navbar(){
       <div className="n-right">
         <div className="n-list">
           <ul style={{ listStyleType: "none" }}>
-            <li  style={{cursor: "none"}}>
-              <Link to="/" onClick={(e)=>handleCurrentRoute("home")}>Home</Link>
-            </li>
-           
-            
-            <li style={{cursor: "none"}}>
-           <Link to="/Works" onClick={(e)=>handleCurrentRoute("works")}>Works</Link>
-            </li>
-            <li>
-              
-            </li>
+            {links.map((link) => (
+              <li className={location.pathname === link.path ? "text-[#111827] dark:text-[#42b883] border-[#111827] dark:border-[#42b883] border-b-2   " : "  hover:text-text[] hover:underline underline-offset-8 "} key={link.path} style={{ cursor: "none" }}>
+                <Link to={link.path}>{link.name}</Link>
+              </li>
+            ))}
           </ul>
         </div>
-
       </div>
     </div>
   );
