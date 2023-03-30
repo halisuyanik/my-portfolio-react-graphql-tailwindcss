@@ -27,11 +27,7 @@ const Footer = () => {
             </div>
             <nav className="space-x-3 py-12 sm:space-x-6 ">
             </nav>
-            <p className="mb-2 font-bold text-gray-600 dark:text-gray-400 ">
-            {" "}
-            <a href="mailto:halisuyanik@outlook.com" className="underline underline-offset-2 font-semibold dark:text-zinc-300" style={{color: state.darkMode?"#CAD4D8":"#343434 ", cursor:"none"} }>Send me an email </a>
-            
-            </p>
+           
           </div>
         </div>
       </footer>
