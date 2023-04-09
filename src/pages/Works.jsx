@@ -75,7 +75,7 @@ const Works = () => {
           {/* heading */}
           <section className="text-gray-600 ">
             <div className="container px-5 py-15 mx-auto">
-              <div className="flex flex-wrap -m-4 justify-center sm:jutify-start projectCard">
+              <div className="flex flex-wrap -m-4 justify-center sm:jutify-start ">
                 {projects &&
                   projects?.map(
                     ({ title, id, description, source, tags, language }) => (
